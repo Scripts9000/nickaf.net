@@ -101,23 +101,4 @@ body {
 }
 
 
-.services {
-  list-style-type: circle;
-}
 
-
-/* Add some basic styling for the list items */
-.service {
-   cursor: pointer;
-   padding: 8px;
-   border-bottom: 1px solid #ccc;
-    }
-
-/* Hide the details by default */
-.details {
-    display: none;
-    padding-left: 20px;
-    }
-
-
-  
