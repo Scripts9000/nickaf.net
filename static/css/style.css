@@ -105,4 +105,12 @@ body {
   list-style-type: circle;
 }
 
+.description {
+  list-style-type: square;
+  margin-left: 5px;
+  padding-left: 5px;
+
+}
+
+
 
