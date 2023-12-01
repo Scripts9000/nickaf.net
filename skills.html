@@ -346,27 +346,25 @@
 </body>
 
 <script>
-  const popupDelay = 2000; 
-  const popups = {};
+  const popupDelay = 2000; // Set your desired delay in milliseconds
+  const timeouts = {};
 
   function showPopup(categoryId) {
     const popup = document.getElementById(`popup-${categoryId}`);
+    clearTimeout(timeouts[categoryId]); // Clear previous timeout
 
-    if (!popups[categoryId]) {
-      popups[categoryId] = true;
-
-      setTimeout(() => {
-        popup.style.display = 'block';
-        popups[categoryId] = false;
-      }, popupDelay);
-    }
+    timeouts[categoryId] = setTimeout(() => {
+      popup.style.display = 'block';
+    }, popupDelay);
   }
 
   function hidePopup(categoryId) {
     const popup = document.getElementById(`popup-${categoryId}`);
     popup.style.display = 'none';
+    clearTimeout(timeouts[categoryId]); // Clear timeout
   }
 </script>
+
 
 </html>
 
