@@ -139,6 +139,17 @@
       font-size: 14px;
     }
 
+    .popup {
+      position: absolute;
+      display: none;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
     </style>
     
     
@@ -168,6 +179,9 @@
     <div class="column">
       <ul>
         <h2>Operating Systems</h2>
+        <div id="popup-windows7-10" class="popup">
+          <p>Details about Windows 7-8-10 expertise.</p>
+        </div>
         <li><h3>⚫ Winodws 7-8-10</h3></li>
         <li><h3>⚫ Server 2003-2016</h3></li>
         <li><h3>🟡 Server 2019-2022</h3></li>
@@ -326,5 +340,18 @@
 
   
 </body>
+
+<script>
+  function showPopup(categoryId) {
+    const popup = document.getElementById(`popup-${categoryId}`);
+    popup.style.display = 'block';
+  }
+
+  function hidePopup(categoryId) {
+    const popup = document.getElementById(`popup-${categoryId}`);
+    popup.style.display = 'none';
+  }
+</script>
+
 </html>
 
