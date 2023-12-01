@@ -346,11 +346,20 @@
 </body>
 
 <script>
+  const popupDelay = 1000; 
+  const popups = {};
+
   function showPopup(categoryId) {
     const popup = document.getElementById(`popup-${categoryId}`);
-    setTimeout(() => {
-      popup.style.display = 'block';
-    }, 1000);
+
+    if (!popups[categoryId]) {
+      popups[categoryId] = true;
+
+      setTimeout(() => {
+        popup.style.display = 'block';
+        popups[categoryId] = false;
+      }, popupDelay);
+    }
   }
 
   function hidePopup(categoryId) {
