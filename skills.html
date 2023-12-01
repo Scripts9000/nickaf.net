@@ -348,7 +348,9 @@
 <script>
   function showPopup(categoryId) {
     const popup = document.getElementById(`popup-${categoryId}`);
-    popup.style.display = 'block';
+    setTimeout(() => {
+      popup.style.display = 'block';
+    }, 500);
   }
 
   function hidePopup(categoryId) {
