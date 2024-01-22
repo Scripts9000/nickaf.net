@@ -1,0 +1,9 @@
+<li class="services">
+                    <strong>Web Development services.</strong>
+                    <div class="description">
+                        &#8226 Personal Websites: Reflect your identity and skills with simple user-friendly designs. <br>
+                        &#8226 Portfolios: Build a page to show your achievements, promote a product or a service. <br>
+                        &#8226 Landing Pages: Drive conversions with impactful and optimized designs. <br>
+                        
+                    </div>
+                </li>
